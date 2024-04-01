@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: sampledemo
-  namespace: namespace-workflow-1711357692801
+  name: first-cicd
+  namespace: demo
 spec:
   type: LoadBalancer
   selector:
-    app: sampledemo
+    app: first-cicd
   ports:
     - protocol: TCP
       port: 5000

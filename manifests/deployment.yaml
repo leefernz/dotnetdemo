@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sampledemo
+  name: first-cicd
   labels:
-    app: sampledemo
-  namespace: namespace-workflow-1711357692801
+    app: first-cicd
+  namespace: demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sampledemo
+      app: first-cicd
   template:
     metadata:
       labels:
-        app: sampledemo
+        app: first-cicd
     spec:
       containers:
-        - name: sampledemo
-          image: leefernz.azurecr.io/image-workflow-1711357692801:latest
+        - name: first-cicd
+          image: azureforbeginner.azurecr.io/image-sample-1711943921860:latest
           ports:
             - containerPort: 5000
